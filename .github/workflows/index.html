@@ -1,0 +1,58 @@
+2026.09.02 วันพุธ
+09:31 กฤติกานต์ 20 รูป
+2026.09.04 วันศุกร์
+10:14 กฤติกานต์ 20 <h1>🎵 เพลงประจำวัน</h1>
+
+<button id="randomButton">🎵 สุ่มเพลง</button>
+
+<p id="song">กดปุ่มเพื่อสุ่มเพลง</p>
+
+<iframe
+  id="youtubePlayer"
+  width="300"
+  height="170"
+  src=""
+  allow="autoplay; encrypted-media"
+  allowfullscreen>
+</iframe>
+
+<script>
+const songs = [
+  { name: "About You - The 1975", id: "tGv7CUutzqU" },
+  { name: "I Wanna Be Yours - Arctic Monkeys", id: "dXunNLQWAAs" },
+  { name: "Secret Door - Arctic Monkeys", id: "f9HF0DJ1cu8" },
+  { name: "the perfect pair - beabadoobee", id: "HwtEBQiuX-c" },
+  { name: "love. - wave to earth", id: "Q49pnA4jsp8" },
+  { name: "ฝนตกไหม - Three Man Down", id: "ENnGPkhVu2g" },
+  { name: "ถ้าเธอรักฉันจริง - Three Man Down", id: "JBAuRoIRAs8" },
+  { name: "Birdsong - Dept feat. LANDOKMAI", id: "YklfbF_qdfM" },
+  { name: "17 - Dept", id: "6QdC2thAUUg" },
+  { name: "Just One Thing - Solitude Is Bliss", id: "vg0ihcNtc1s" }
+];
+
+const button = document.getElementById("randomButton");
+const songText = document.getElementById("song");
+const player = document.getElementById("youtubePlayer");
+
+button.addEventListener("click", function() {
+  const randomIndex = Math.floor(Math.random() * songs.length);
+  const song = songs[randomIndex];
+
+  songText.textContent = "🎵 " + song.name;
+  player.src = "https://www.youtube.com/embed/" + song.id + "?autoplay=1";
+});
+</script>
+10:15 กฤติกานต์ 20 const songs = [
+  "Wave to Earth - Seasons",
+  "Wave to Earth - Love.",
+  "NewJeans - Ditto",
+  "Laufey - From The Start"
+];
+
+const button = document.getElementById("randomButton");
+const song = document.getElementById("song");
+
+button.addEventListener("click", function () {
+  const random = Math.floor(Math.random() * songs.length);
+  song.textContent = songs[random];
+});
