@@ -1,7 +1,4 @@
-2026.09.02 วันพุธ
-09:31 กฤติกานต์ 20 รูป
-2026.09.04 วันศุกร์
-10:14 กฤติกานต์ 20 <h1>🎵 เพลงประจำวัน</h1>
+<h1>🎵 เพลงประจำวัน</h1>
 
 <button id="randomButton">🎵 สุ่มเพลง</button>
 
@@ -41,18 +38,5 @@ button.addEventListener("click", function() {
   songText.textContent = "🎵 " + song.name;
   player.src = "https://www.youtube.com/embed/" + song.id + "?autoplay=1";
 });
+
 </script>
-10:15 กฤติกานต์ 20 const songs = [
-  "Wave to Earth - Seasons",
-  "Wave to Earth - Love.",
-  "NewJeans - Ditto",
-  "Laufey - From The Start"
-];
-
-const button = document.getElementById("randomButton");
-const song = document.getElementById("song");
-
-button.addEventListener("click", function () {
-  const random = Math.floor(Math.random() * songs.length);
-  song.textContent = songs[random];
-});
